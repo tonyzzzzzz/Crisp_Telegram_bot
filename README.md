@@ -29,6 +29,23 @@ Download from [release page]().
 
 Replace GOOS GOARCH with your server architecture.
 
+## config.yaml
+
+```
+debug: true
+redis:
+  host: localhost:6379
+  db: 0
+  password: ''
+crisp:
+  identifier: 049sk12f-8349-8274-9d91-f21jv91kafa7
+  key: 078f2106a5d89179gkqn38e5e82e3c7j30ajfkelqnvd874fb2378573499ff505
+telegram:
+  key: 
+admins:
+  - 93847124
+```
+
 ## License
 
 This project is licensed under the MIT License.
