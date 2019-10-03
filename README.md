@@ -16,6 +16,9 @@ Will Support:
 1. Create a bot with [BotFather](https://t.me/botfather), save the token for later use.
 1. Build & Run.
 
+## Requirements
+Redis server is used for storing relation between Telegram messages and Crisp messages.
+
 ## Installing & Deployment
 
 ### Use prebuilt binary
