@@ -37,7 +37,7 @@ func (s *CrispMessageInfo) UnmarshalBinary(data []byte) error {
 
 func contains(s []interface{}, e int64) bool {
 	for _, a := range s {
-		if a == e {
+		if int64(a.(int)) == e {
 			return true
 		}
 	}
@@ -83,7 +83,7 @@ func replyToUser(update *tgbotapi.Update) {
 
 func sendMsgToAdmins(text string, WebsiteID string, SessionID string) {
 	for _, id := range config.Get("admins").([]interface{}) {
-		msg := tgbotapi.NewMessage(id.(int64), text)
+		msg := tgbotapi.NewMessage(int64(id.(int)), text)
 		msg.ParseMode = "Markdown"
 		sent, _ := bot.Send(msg)
 
